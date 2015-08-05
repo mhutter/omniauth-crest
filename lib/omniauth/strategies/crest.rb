@@ -7,12 +7,11 @@ module OmniAuth
 
       option :client_options, site: 'https://login.eveonline.com'
 
-      uid { raw_info['CharacterOwnerHash'] }
+      uid { raw_info['CharacterID'] }
 
       info do
         {
           name: raw_info['CharacterName'],
-          character_name: raw_info['CharacterName'],
           character_id: raw_info['CharacterID'],
           expires_on: raw_info['ExpiresOn'],
           scopes: raw_info['Scopes'],
