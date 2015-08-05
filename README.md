@@ -2,7 +2,39 @@
 
 This gem provides the [EVE Online](http://www.eveonline.com)/CREST strategy for [OmniAuth](https://github.com/intridea/omniauth).
 
-This allows your users to authenticate themselves via their EVE Online Account.
+This allows your users to authenticate themselves via their EVE Online **Character**.
+
+auth_hash example:
+
+```ruby
+{
+  "provider" => "crest",
+  "uid" => 1337,
+  "info" => {
+    "name" => "Foo Bar",
+    "character_id" => 1337,
+    "expires_on" => "2015-08-05T07:02:55",
+    "scopes" => "",
+    "token_type" => "Character",
+    "character_owner_hash" => "b4d455="
+  },
+  "credentials" => {
+    "token" => "...",
+    "expires_at" => 1438758175,
+    "expires" => true
+  },
+  "extra" => {
+    "raw_info" => {
+      "CharacterID" => 1337,
+      "CharacterName" => "Foo Bar",
+      "ExpiresOn" => "2015-08-05T07:02:55",
+      "Scopes" => "",
+      "TokenType" => "Character",
+      "CharacterOwnerHash" => "b4d455="
+    }
+  }
+}
+```
 
 ## Usage
 
